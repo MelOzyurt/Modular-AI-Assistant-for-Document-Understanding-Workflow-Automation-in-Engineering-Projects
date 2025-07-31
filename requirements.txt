@@ -4,4 +4,6 @@ python-docx
 pymupdf
 pandas
 PyPDF2
+gspread
+google-auth
 
