@@ -35,3 +35,17 @@ if uploaded_file:
                 df.to_excel("summary.xlsx", index=False)
                 with open("summary.xlsx", "rb") as f:
                     st.download_button("Download Excel", f, file_name="summary.xlsx")
+
+from utils.google_sheets_handler import append_to_sheet
+
+# Example usage after summary is generated:
+sheet_id = "your_google_sheet_id"  # Found in the URL of your Google Sheet
+worksheet = "Sheet1"
+
+if st.button("Send to Google Sheets"):
+    try:
+        append_to_sheet(sheet_id, worksheet, summary)
+        st.success("✅ Data sent to Google Sheet!")
+    except Exception as e:
+        st.error(f"❌ Failed to send data: {e}")
+
