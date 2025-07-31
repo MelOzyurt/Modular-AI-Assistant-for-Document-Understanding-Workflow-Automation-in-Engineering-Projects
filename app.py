@@ -6,7 +6,8 @@ import json
 import pandas as pd
 
 st.set_page_config(page_title="GW Power AI Assistant", layout="wide")
-st.title("🔧 GW Power-Safe | AI Document Assistant")
+st.title("⚡AI Document Assistant for Energy Projects ")
+
 
 # Upload Document
 uploaded_file = st.file_uploader("Upload Tender / Specification Document (PDF or DOCX)", type=["pdf", "docx"])
