@@ -3,3 +3,5 @@ openai
 python-docx
 pymupdf
 pandas
+PyPDF2
+
